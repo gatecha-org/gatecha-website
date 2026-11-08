@@ -40,12 +40,12 @@
         <a href="/#install">Install</a>
         <a href="/#wordpress">WordPress</a>
         <a href="/docs/" class="active">Docs</a>
-        <a href="https://github.com/Upellift99/GateCHA" class="nav-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <a href="https://github.com/gatecha-org/gatecha" class="nav-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
           </svg>
         </a>
-        <a href="https://github.com/Upellift99/GateCHA" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://github.com/gatecha-org/gatecha" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </nav>
   </header>
@@ -94,7 +94,7 @@
           <div class="code-block">
             <button class="copy-btn" type="button">Copy</button>
             <pre><code>mkdir -p /opt/docker/GateCHA &amp;&amp; cd /opt/docker/GateCHA
-wget https://raw.githubusercontent.com/Upellift99/GateCHA/refs/heads/main/docker-compose.yml
+wget https://raw.githubusercontent.com/gatecha-org/gatecha/refs/heads/main/docker-compose.yml
 docker compose up -d</code></pre>
           </div>
           <p>Open <code>http://localhost:8080</code> and log in. If you did not set <code>GATECHA_ADMIN_PASSWORD</code>, a random one is printed to the container logs on first boot.</p>
@@ -105,17 +105,17 @@ docker compose up -d</code></pre>
             <pre><code>docker run -d -p 8080:8080 \
   -v gatecha_data:/app/data \
   -e GATECHA_ADMIN_PASSWORD=your-password \
-  ghcr.io/upellift99/gatecha:latest</code></pre>
+  ghcr.io/gatecha-org/gatecha:latest</code></pre>
           </div>
 
           <h3>Prebuilt binary (no Docker)</h3>
-          <p>GateCHA ships as a single self-contained binary &mdash; the dashboard is embedded, so there are no extra files or runtime dependencies. Download the archive for your platform from the <a href="https://github.com/Upellift99/GateCHA/releases/latest">latest release</a> (<code>linux</code>/<code>darwin</code>/<code>windows</code>, <code>amd64</code>/<code>arm64</code>).</p>
+          <p>GateCHA ships as a single self-contained binary &mdash; the dashboard is embedded, so there are no extra files or runtime dependencies. Download the archive for your platform from the <a href="https://github.com/gatecha-org/gatecha/releases/latest">latest release</a> (<code>linux</code>/<code>darwin</code>/<code>windows</code>, <code>amd64</code>/<code>arm64</code>).</p>
           <div class="code-block">
             <button class="copy-btn" type="button">Copy</button>
             <pre><code># Example: Linux x86_64 &mdash; check the releases page for the current version
 VERSION=0.9.1
 curl -fsSL -o gatecha.tar.gz \
-  "https://github.com/Upellift99/GateCHA/releases/download/v${VERSION}/gatecha_${VERSION}_linux_amd64.tar.gz"
+  "https://github.com/gatecha-org/gatecha/releases/download/v${VERSION}/gatecha_${VERSION}_linux_amd64.tar.gz"
 tar -xzf gatecha.tar.gz
 GATECHA_ADMIN_PASSWORD=your-password ./gatecha</code></pre>
           </div>
@@ -124,7 +124,7 @@ GATECHA_ADMIN_PASSWORD=your-password ./gatecha</code></pre>
           <div class="code-block">
             <button class="copy-btn" type="button">Copy</button>
             <pre><code># Prerequisites: Go 1.26+, Node.js 20+
-git clone https://github.com/Upellift99/GateCHA.git
+git clone https://github.com/gatecha-org/gatecha.git
 cd GateCHA
 make build        # SQLite only (default)
 ./gatecha</code></pre>
@@ -266,8 +266,8 @@ if resp.json().get('ok'):
         <section id="resources">
           <h2>Resources</h2>
           <ul class="bullets">
-            <li><a href="https://github.com/Upellift99/GateCHA" target="_blank" rel="noopener noreferrer">GateCHA on GitHub</a> — source, issues, releases.</li>
-            <li><a href="https://github.com/Upellift99/GateCHA-WordPress" target="_blank" rel="noopener noreferrer">GateCHA WordPress plugin</a> — drop-in protection for WordPress forms.</li>
+            <li><a href="https://github.com/gatecha-org/gatecha" target="_blank" rel="noopener noreferrer">GateCHA on GitHub</a> — source, issues, releases.</li>
+            <li><a href="https://github.com/gatecha-org/gatecha-wordpress" target="_blank" rel="noopener noreferrer">GateCHA WordPress plugin</a> — drop-in protection for WordPress forms.</li>
             <li><a href="https://altcha.org" target="_blank" rel="noopener noreferrer">ALTCHA project</a> — the underlying open CAPTCHA protocol and widget.</li>
           </ul>
         </section>
@@ -291,15 +291,15 @@ if resp.json().get('ok'):
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/docs/">Documentation</a></li>
-            <li><a href="https://github.com/Upellift99/GateCHA" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://github.com/Upellift99/GateCHA-WordPress" target="_blank" rel="noopener noreferrer">WordPress Plugin</a></li>
+            <li><a href="https://github.com/gatecha-org/gatecha" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://github.com/gatecha-org/gatecha-wordpress" target="_blank" rel="noopener noreferrer">WordPress Plugin</a></li>
             <li><a href="https://altcha.org" target="_blank" rel="noopener noreferrer">ALTCHA Project</a></li>
           </ul>
         </div>
         <div class="footer-links">
           <h2>Legal</h2>
           <ul>
-            <li><a href="https://github.com/Upellift99/GateCHA/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+            <li><a href="https://github.com/gatecha-org/gatecha/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
           </ul>
           <p class="footer-privacy">No tracking. No analytics. This site collects zero data.</p>
         </div>
